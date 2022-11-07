@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Xóa sách sinh viên</title>
+</head>
+<body>
+	<h2>Xóa sách sinh viên : </h2>
+	<?php 
+		for($i = 1; $i <= sizeof($studentList); $i++){
+			echo "<p>" .$i .". <a href='?iddelete=" .$studentList[$i]->id ."'>" .$studentList[$i]->name ."</a></p>";
+			echo "<p>Age : " .$studentList[$i]->age .". </p> ";
+			echo "<p>University : " .$studentList[$i]->university.". </p><br>";
+		}
+	?>
+	<br>
+	<p><a href="../index.php">Home page</a></p>
+</body>
+</html>

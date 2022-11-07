@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sửa sinh viên</title>
+</head>
+<body>
+	<h2 align="center">Sửa sinh viên</h2>
+	<?php 
+		$idedit = $_GET['idedit'] ; 
+		echo "<form align='center' action='../Controller/C_student.php?edit=1&iddedit=$idedit' method='POST'>
+			<table align='center'>
+				<tr>
+					<td><label >ID</label></td>
+					<td><input type='text'name='id' id='id' value='$student->id'></td>
+				</tr>
+				<tr>
+					<td><label>Name</label></td>
+					<td><input type='text'name='name' id='name' value='$student->name'></td>
+				</tr>
+				<tr>
+					<td><label>Age</label></td>
+					<td><input type='text'name='age' id='age' value='$student->age'></td>
+				</tr>
+				<tr>
+					<td><label>University</label></td>
+					<td><input type='text'name='university' id='university' value='$student->university'></td>
+				</tr>
+			</table>
+			<br>
+			<input type='submit' id='ok' value='OK' >
+			<input type='reset' name='reset' id='res' value='RESET'>
+		</form>
+		<p align='center'><a href='javascript:history.back()'>Back</a></p>";
+	?>
+</body>
+</html>

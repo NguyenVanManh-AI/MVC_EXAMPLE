@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tìm Kiếm sinh viên</title>
+</head>
+<body>
+	<h2 align="center" >Tìm Kiếm sinh viên</h2>
+	<form action="../Controller/C_student.php?search='1'" method="POST">
+		<table align="center">
+			<tr>
+				<td><label>Trường :</label></td>
+				<td>
+					<select name="col">
+						<option value="id">ID</option>
+						<option value="name">Name</option>
+						<option value="age">Age</option>
+						<option value="university">University</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label>Nhập thông tin tìm kiếm :</label></td>
+				<td><input type="text"name="infor" id="infor"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type='submit' id='ok' value='OK' ></td>
+			</tr>
+		</table>
+	</form>
+	<p align="center"><a href="javascript:history.back()">Back</a></p>
+</body>
+</html>
