@@ -9,10 +9,8 @@
 	<h2>Danh sách sinh viên : </h2>
     <?php 
         if ($studentList->num_rows > 0) {
-            $i = 0 ; 
             while($row = $studentList->fetch_assoc()) {
-                $i++;
-                echo "<p> ID : " .$i. "</p> ";
+                echo "<p> ID : " .$row['id']. "</p> ";
                 echo "<p> Name : " .$row['name'] ." </p> ";
                 echo "<p>Age : " .$row['age'] ." </p> ";
                 echo "<p>University : " .$row['university']." </p><br>";
